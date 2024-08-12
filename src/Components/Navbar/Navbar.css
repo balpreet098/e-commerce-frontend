@@ -1,55 +1,109 @@
+/* Apply box-sizing to all elements for consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    background-color: cyan;
-    height: 150px;
-  }
-  
-  .left-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .left-logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 15px;
-  }
-  
-  .left-com-name {
-    font-size: 20px;
-  }
-  
-  .right-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .right-link {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .list-item {
-    margin: 0 15px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  .right-user-info {
-    margin-left: 20px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .right-user-info span {
-    margin-left: 10px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background:  linear-gradient(135deg, #141616, #a12f2f); /* Gradient background */
+
+  height: 90px; /* Adjusted height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative;
+  z-index: 1000; /* Ensure it stays on top */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+}
+
+.left-logo img {
+  width: 100px;
+  border-radius: 50%; /* Circular logo */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.left-logo img:hover {
+  transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+.left-com-name h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff; /* White text color */
+  margin: 0;
+}
+
+.searchBar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 500px; /* Maximum width for input */
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #00bcd4; /* Border color on focus */
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-link {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  margin: 0 20px;
+  font-size: 18px;
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  position: relative; /* For positioning pseudo-element */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.list-item:hover {
+  color: #00bcd4; /* Change color on hover */
+}
+
+.list-item.active {
+  font-weight: bold; /* Highlight active link */
+  border-bottom: 2px solid #fff; /* White underline for active link */
+  transform: scale(1.1); /* Slightly enlarge the active link */
+}
+
+.right-user-info {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #fff; /* White text color */
+  display: flex;
+  align-items: center;
+}
+
+.right-user-info span {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
