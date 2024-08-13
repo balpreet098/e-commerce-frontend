@@ -1,0 +1,139 @@
+/* Category.css */
+
+.CategoryContainer {
+  background-color: #fff; /* Set a background color */
+  padding: 20px; /* Add padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px; /* Add space around the container */
+}
+
+
+/* Ensure the slider container takes full width */
+.slider-cat .slick-slider {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+
+}
+
+
+/* Style the slider's container */
+.slick-slide {
+  display: flex;
+  justify-content: center; /* Center content within the slide */
+  background-color: #EEF3F7;
+}
+
+/* Style each category item */
+
+
+.category-item {
+  text-align: -webkit-center; /* Center text (use this for compatibility with older WebKit browsers) */
+  padding: 15px; /* Add padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  background-color: #f9f9f9; /* Light gray background for a clean look */
+  border-radius: 20px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  margin: 15px; /* Add space around each item */
+  width: 250px !important;
+}
+
+/* Enhance shadow and add a slight lift on hover */
+.category-item:hover {
+  transform: translateY(-10px); /* Lift the item slightly */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Stronger shadow on hover */
+}
+
+
+/* Style the image */
+.category-item img {
+  width: 40%; /* Make the image responsive */
+  max-width: 500px; /* Set a max-width for the image */
+  height: 100px; /* Maintain aspect ratio */
+  /* border-radius: 50%; Optional: add rounded corners */
+  margin-bottom: 10px; /* Add space between image and text */
+}
+
+/* Style the heading */
+
+.category-item h3 {
+  font-size: 1.5rem; /* Set the font size */
+  color: #333; /* Set the text color */
+  margin-top: 10px; /* Add some space above the text */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 1px; /* Add some space between letters */
+  transition: color 0.3s ease; /* Add a transition effect on color */
+  /* background-color: #f2f2f2  ; */
+
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50px;
+  height: 30px
+  /* background-color: hsl(0, 11%, 96%); */
+
+}
+
+/* Optional: Add a hover effect */
+.category-item h3:hover {
+  color: #ff1493; /* Change color on hover (e.g., deep pink) */
+}
+
+/* Optional: Style dots for navigation */
+.slick-dots {
+  bottom: -20px; /* Position dots below the slider */
+}
+.heading-category {
+  display: flex;
+  justify-content: center;
+}
+
+.underLine {
+  width: 60%; /* Set the width of the underline */
+  height: 3px; /* Set the thickness of the underline */
+  background-color: grey; /* Set the color of the underline */
+  margin: 5px auto 0; /* Center the underline below the text with some spacing */
+  border-radius: 2px; /* Optional: add rounded corners to the underline */
+}
+@media (min-width: 1200px) {
+  .h1,
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Initial styling for the heading */
+.heading-category h1 {
+  font-size: 3rem; /* Increase the font size */
+  color: rgb(101, 76, 160); /* Set the text color */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
+  opacity: 0; /* Start with the text hidden */
+  transform: translateY(20px); /* Start with the text slightly below */
+  animation: slideIn 1.5s ease-out forwards; /* Trigger the animation */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Keyframe animation for the slide-in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.heading-category h1:hover {
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
+  color: #ff1493; /* Change text color on hover (e.g., to deep pink) */
+  cursor: pointer;
+}
+

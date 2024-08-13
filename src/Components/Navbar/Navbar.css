@@ -5,20 +5,22 @@
   box-sizing: border-box;
 }
 
+/* Navbar container */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background:  linear-gradient(135deg, #141616, #a12f2f); /* Gradient background */
-
+  background: linear-gradient(135deg, #141616, #a12f2f); /* Gradient background */
   height: 90px; /* Adjusted height */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   position: relative;
   z-index: 1000; /* Ensure it stays on top */
   border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* Left container */
 .left-container {
   display: flex;
   align-items: center;
@@ -41,10 +43,12 @@
   margin: 0;
 }
 
+/* Search bar */
 .searchBar {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  margin: 0 20px; /* Margin for spacing */
 }
 
 .searchInput {
@@ -62,11 +66,14 @@
   border-color: #00bcd4; /* Border color on focus */
 }
 
+/* Right container */
 .right-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* Right links - hidden on smaller screens */
 .right-link {
   display: flex;
   list-style: none;
@@ -83,16 +90,17 @@
   transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
 }
 
+.right-link .list-item.active {
+  color: gold !important;
+  transform: scale(1.1);
+  border-bottom: 1px white solid;
+}
+
 .list-item:hover {
-  color: #00bcd4; /* Change color on hover */
+  color: gold; /* Change color on hover */
 }
 
-.list-item.active {
-  font-weight: bold; /* Highlight active link */
-  border-bottom: 2px solid #fff; /* White underline for active link */
-  transform: scale(1.1); /* Slightly enlarge the active link */
-}
-
+/* User info */
 .right-user-info {
   margin-left: 20px;
   font-size: 18px;
@@ -107,3 +115,104 @@
   font-weight: bold;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff; /* White color */
+}
+
+/* Full-screen Mobile Menu */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position to cover the full screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+  z-index: 2000; /* Ensure it appears on top */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 0; /* Remove default padding */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.mobile-menu.open {
+  display: flex; /* Show menu when open */
+  opacity: 1; /* Full opacity */
+  transform: translateX(0); /* Reset transform */
+}
+
+.mobile-menu .list-item {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  text-align: center; /* Center text */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.mobile-menu .list-item:hover {
+  color: #00bcd4; /* Highlight color on hover */
+}
+
+/* Close button for mobile menu */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff; /* White color */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.close-menu:hover {
+  color: #00bcd4; /* Highlight color on hover */
+}
+
+/* Responsive styles for screen width less than 1425px */
+@media (max-width: 1425px) {
+  .right-link {
+    display: none; /* Hide regular navigation links */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .searchBar {
+    margin: 10px 0; /* Margin for spacing */
+  }
+
+  .right-container {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-com-name h1 {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .searchInput {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px 12px;
+  }
+
+  .right-user-info {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .right-user-info span {
+    font-size: 20px; /* Smaller icon size */
+  }
+}

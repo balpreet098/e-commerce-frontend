@@ -1,0 +1,20 @@
+.underLineDeals hr {
+    border: none; /* Remove the default border */
+    height: 4px; /* Set the thickness of the line */
+    /* background-color: grey; Set the color of the line (e.g., deep pink) */
+    border-radius: 2px; /* Add rounded corners */
+    width: 95%; /* Set the width of the line */
+    margin: 20px auto; /* Center the line horizontally and add some margin */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.DealsContainer2{
+    display: flex;
+    background-color: aliceblue;
+    /* flex-direction: row; */
+}
+.DealsContainer2 twoItemsInLeftContainer{
+    display: flex
+}
+
