@@ -93,7 +93,7 @@
 }
 
 .underLine {
-  width: 60%; /* Set the width of the underline */
+  width: 90%; /* Set the width of the underline */
   height: 3px; /* Set the thickness of the underline */
   background-color: grey; /* Set the color of the underline */
   margin: 5px auto 0; /* Center the underline below the text with some spacing */

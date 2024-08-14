@@ -1,20 +1,97 @@
-.underLineDeals hr {
-    border: none; /* Remove the default border */
-    height: 4px; /* Set the thickness of the line */
-    /* background-color: grey; Set the color of the line (e.g., deep pink) */
-    border-radius: 2px; /* Add rounded corners */
-    width: 95%; /* Set the width of the line */
-    margin: 20px auto; /* Center the line horizontally and add some margin */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+.DealsContainer .underLineDeals .hrUnderLineDeals {
+  border: none; /* Remove the default border */
+  height: 3px; /* Set the thickness of the line */
+  /* background-color: grey; Set the color of the line (e.g., deep pink) */
+  border-radius: 2px; /* Add rounded corners */
+  width: 95%; /* Set the width of the line */
+  margin: 20px auto; /* Center the line horizontally and add some margin */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+
+  background-color: black;
 }
 
-.DealsContainer2{
+.DealsContainer2 {
+  display: flex;
+  /* background-color: aliceblue; */
+  justify-content: space-between;
+}
+.DealsContainer2 .twoItemsInLeftContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0px 0px 0px 50px;
+  padding: 0px 0px 0px 0px;
+}
+.DealsContainer2 .TimeLeft {
+  color: red;
+}
+
+.DealsContainer2 .verticalLine {
+  width: 2px; /* Thickness of the line */
+  height: 30px; /* Set the desired height for a smaller line */
+  background-color: black; /* Color of the line */
+  border: none; /* Remove default border */
+  margin: auto 10px; /* Center the line vertically and add horizontal spacing */
+  transform: none; /* Remove rotation to keep the line vertical */
+}
+.DealsContainer2 .rightDealsContainer {
+  margin: 0px 30px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+/* .MainDealsContainer .DealsContainer .DealsContainer3{
+
+    height: 700px;
+    width: 90%;
+    background-color:bisque;
+    border: 2px solid black;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0x  0px  0px 0px ; 
+    padding: 0x  0px  0px 0px ; 
+} */
+
+.MainDealsContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh;
+}
+
+.MainDealsContainer .DealsContainer .DealsContainer3 {
+  width: 130vh;
+  height: 400px;
+  /* max-width: 700px; */
+  /* background-color: bisque; */
+  border: 2px solid black;
+  display: flex;
+  /* Center content horizontally inside DealsContainer3 */
+  /* Center content vertically inside DealsContainer3 */
+  margin: 0px auto 0px 0px; /* Center DealsContainer3 horizontally within MainDealsContainer */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px;
+  /* grid-template-columns: auto auto auto; */
+}
+
+.MainInternalDealsContainer {
+    width: 300vh;
+    height: 340px;
+    /* background-color: aqua; */
+    border: 2px solid black;
     display: flex;
-    background-color: aliceblue;
-    /* flex-direction: row; */
+    justify-content: space-between;
+    margin: 0px auto 0px 0px;
+    padding: 10px;
+    border-radius: 10px;
 }
-.DealsContainer2 twoItemsInLeftContainer{
-    display: flex
+.MainInternalDealsContainer .InternalDealsContainer1 {
+    width: 270px;
+    height: 300px;
+    /* background-color: blue; */
+    border: 2px solid black;
+    margin: 10px auto 0px 15px;
+    padding: 10px;
+    border-radius: 10px;
 }
-

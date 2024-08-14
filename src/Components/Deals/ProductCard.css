@@ -1,0 +1,177 @@
+.ProductText {
+    display: flex;
+    justify-content: center;
+    color: maroon;
+}
+
+.mainsir .hr {
+    width: 90%; /* Or whatever width you'd like */
+    margin: 0 auto; /* This centers the hr */
+    border: 2px solid black; /* Adjust the border as needed */
+    height: 4px; /* Adjust the height as needed */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-rating {
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.star.filled {
+    color: orange;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.card-button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-add-to-cart {
+    background-color: #ff6347; /* Customize the color as needed */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover,
+.card-add-to-cart:hover {
+    opacity: 0.9;
+}
+
+
+
+.mainsir .ShowMore{
+    display: flex;
+    justify-content: center;
+}
+.ShowMore {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ShowMore h3 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+} 
+
+.ShowMore i {
+    margin-left: 8px; /* Space between text and icon */
+    font-size: 1.2rem; /* Adjust the icon size as needed */
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.8rem;
+    }
+
+    .card-price {
+        font-size: 1.1rem;
+    }
+
+    .card-button,
+    .card-add-to-cart {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .card-button,
+    .card-add-to-cart {
+        width: 100%;
+    }
+}
