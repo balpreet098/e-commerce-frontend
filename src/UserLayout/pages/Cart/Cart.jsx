@@ -1,9 +1,13 @@
 import React from 'react'
+import CartComponent from '../../../Components/CartComponent/CartComponent'
 
 function Cart() {
   return (
-    <div>Cart</div>
+   <>
+   <CartComponent/>
+    
+   </>
   )
 }
-
 export default Cart
+

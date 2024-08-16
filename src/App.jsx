@@ -10,6 +10,7 @@ import Orders from './UserLayout/pages/Orders/Orders';
 import Products from './UserLayout/pages/Products/Products';
 import Register from './UserLayout/pages/Register/Register';
 
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -25,8 +26,9 @@ function App() {
           <Route path="/account" element={<Accounts />} /> {/* Use Accounts component */}
           <Route path="/orders" element={<Orders />} />
           <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
+      <Route path='/register' element={<Register/>}/>
         </Routes>
+
       </>
     </Router>
   );
